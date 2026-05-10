@@ -1,6 +1,6 @@
-# LuminariWebClient
+# ThresholdrpgWebClient
 
-LuminariWebClient is a web-based MUD client for **LuminariMUD-compatible** games. It combines a React frontend with a Node WebSocket/Telnet proxy so a browser can connect to a Telnet MUD while still getting live MSDP-driven HUD data.
+ThresholdrpgWebClient is a web-based MUD client for **ThresholdrpgMUD-compatible** games. It combines a React frontend with a Node WebSocket/Telnet proxy so a browser can connect to a Telnet MUD while still getting live MSDP-driven HUD data.
 
 ## Features
 
@@ -31,7 +31,7 @@ LuminariWebClient is a web-based MUD client for **LuminariMUD-compatible** games
 - In-client display settings for output font size, line spacing, wrap, auto-scroll, minimap font size, minimap height, and shared sidebar font family/size
 - Combined config save/load for display settings, MSDP variable mappings, aliases, and triggers
 - User-configurable MSDP variable names that are saved with client settings and applied by the proxy
-- Luminari `^` color-code rendering in non-terminal UI text
+- Thresholdrpg `^` color-code rendering in non-terminal UI text
 - Shared settings file for ports, defaults, presets, and personalization
 - Node proxy that negotiates MSDP and bridges browser WebSocket traffic to the MUD
 
@@ -95,7 +95,7 @@ npm start
 The PM2 command that works for this app is:
 
 ```bash
-pm2 start dist/server/index.js --name luminari-web-client
+pm2 start dist/server/index.js --name thresholdrpg-web-client
 ```
 
 Recommended full flow:
@@ -103,17 +103,17 @@ Recommended full flow:
 ```bash
 npm install
 npm run build
-pm2 start dist/server/index.js --name luminari-web-client
+pm2 start dist/server/index.js --name thresholdrpg-web-client
 ```
 
 Useful PM2 commands:
 
 ```bash
 pm2 status
-pm2 logs luminari-web-client
-pm2 restart luminari-web-client
-pm2 stop luminari-web-client
-pm2 delete luminari-web-client
+pm2 logs thresholdrpg-web-client
+pm2 restart thresholdrpg-web-client
+pm2 stop thresholdrpg-web-client
+pm2 delete thresholdrpg-web-client
 pm2 save
 pm2 startup
 ```
@@ -121,7 +121,7 @@ pm2 startup
 To run on a different port:
 
 ```bash
-PORT=4000 pm2 start dist/server/index.js --name luminari-web-client
+PORT=4000 pm2 start dist/server/index.js --name thresholdrpg-web-client
 ```
 
 An optional PM2 ecosystem file also exists:
@@ -186,11 +186,11 @@ export const appSettings = {
         description: 'Post War of the Lance Dragonlance RP and Adventuring.',
       },
       {
-        id: 'luminari',
-        name: 'LuminariMUD',
-        host: 'LuminariMUD.com',
+        id: 'thresholdrpg',
+        name: 'ThresholdrpgMUD',
+        host: 'ThresholdrpgMUD.com',
         port: 4100,
-        description: 'MUD running the LuminariMUD codebase in the world of Lumia.',
+        description: 'MUD running the ThresholdrpgMUD codebase in the world of Lumia.',
       },
       {
         id: 'faerun',

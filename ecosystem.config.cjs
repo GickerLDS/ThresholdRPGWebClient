@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'luminari-web-client',
+      name: 'thresholdrpg-web-client',
       cwd: __dirname,
       script: './dist/server/index.js',
       exec_mode: 'fork',
